@@ -1,0 +1,37 @@
+{
+    "name": "uau/site",
+    "type": "project",
+    "license": "private",
+    "authors": [
+        {
+            "name": "Marcos Freitas",
+            "email": "marcosfreitas@c4network.com.br"
+        }
+	],
+	"scripts" : {
+		"post-install-cmd" : []
+	},
+    "require": {
+        "php": "^7.2",
+        "wpackagist-plugin/advanced-database-cleaner": "^3.0",
+        "wpackagist-plugin/classic-editor": "^1.5",
+        "wpackagist-plugin/schema": "^1.7",
+        "wpackagist-plugin/wordfence": "^7.4",
+        "wpackagist-plugin/wordfence-login-security": "^1.0",
+        "wpackagist-plugin/wps-hide-login": "^1.5",
+        "wpackagist-plugin/amp": "^1.5",
+        "wpackagist-plugin/wordpress-seo": "^14.0",
+        "wpackagist-plugin/wp-mail-smtp": "^2.0",
+        "wpackagist-plugin/advanced-custom-fields": "^5.8",
+        "wpackagist-plugin/jetpack": "^8.6",
+        "wpackagist-plugin/wp-mail-logging": "^1.9",
+        "wpackagist-plugin/google-site-kit": "^1.10"
+    },
+    "require-dev": {},
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    }
+}
