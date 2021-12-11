@@ -18,31 +18,24 @@
  * @package WordPress
  */
 
-/**
- * Composer autoload
- */
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-	require_once (__DIR__ . '/vendor/autoload.php');
-}
-
 // ** Configurações do MySQL - Você pode pegar estas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define( 'DB_NAME', 'wp-ks' );
+define( 'DB_NAME', 'nome_do_banco_de_dados_aqui' );
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'docker' );
+define( 'DB_USER', 'nome_de_usuario_aqui' );
 
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', 'banana pijama' );
+define( 'DB_PASSWORD', 'senha_aqui' );
 
 /** Nome do host do MySQL */
-define( 'DB_HOST', 'database' );
+define( 'DB_HOST', 'localhost' );
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define( 'DB_CHARSET', 'utf8' );
 
 /** O tipo de Collate do banco de dados. Não altere isso se tiver dúvidas. */
-define( 'DB_COLLATE', 'utf8mb4_general_ci' );
+define( 'DB_COLLATE', '' );
 
 /**#@+
  * Chaves únicas de autenticação e salts.
@@ -57,14 +50,15 @@ define( 'DB_COLLATE', 'utf8mb4_general_ci' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'f9HCAP{g3=Mn)EL^.|jD!E<q4&sqG8PAJ9gF9vffp4rWN``=8]#iPa&[DPO9/wRq' );
-define( 'SECURE_AUTH_KEY',  'OZh.Y0Z+V/|vj^qvMe`&-r_3cM^Qy=H+|___W#4y:M2x;9?jW3aO8So^]S5AxOsu' );
-define( 'LOGGED_IN_KEY',    '4nYWti1={,|*D1s^q7;mZrT!c@TLX$o3oQ7%0 nJ@/Bi$AgP:T]c9;Rys<IzQKuF' );
-define( 'NONCE_KEY',        ':VjCX_9U7MSIjMVY4?|7^Oj/m_`^Q*kW j&91Y4x!>PlJl{< V>p=0eEj:hPN}FH' );
-define( 'AUTH_SALT',        'MbH-@uS5Aj*5*9 s46#.`k;[WdDaCpKE<^vv>^Ho*)Kf@)#tMlaSHw;[CJeA$KuZ' );
-define( 'SECURE_AUTH_SALT', ';Z4RSz~ZI9wca5!7T{y4~geq7tuwq_?wphL$.FN!r~roib+8>&d{RrbY{*];e3B]' );
-define( 'LOGGED_IN_SALT',   'bsw9UML4JO%x=>MdjH%i,Z1klnn|]s4ip%W6 }Kp^Lr0*!K>;,@$iuct&~ie2GjB' );
-define( 'NONCE_SALT',       '@d;hQ|][O(@jB*A5UWc_{ElyC/h>kDJ8Ks`.MxAgrK`M,r$N(Icx5{u62yy2>HQV' );
+define( 'AUTH_KEY',         'coloque a sua frase única aqui' );
+define( 'SECURE_AUTH_KEY',  'coloque a sua frase única aqui' );
+define( 'LOGGED_IN_KEY',    'coloque a sua frase única aqui' );
+define( 'NONCE_KEY',        'coloque a sua frase única aqui' );
+define( 'AUTH_SALT',        'coloque a sua frase única aqui' );
+define( 'SECURE_AUTH_SALT', 'coloque a sua frase única aqui' );
+define( 'LOGGED_IN_SALT',   'coloque a sua frase única aqui' );
+define( 'NONCE_SALT',       'coloque a sua frase única aqui' );
+
 /**#@-*/
 
 /**
@@ -73,7 +67,7 @@ define( 'NONCE_SALT',       '@d;hQ|][O(@jB*A5UWc_{ElyC/h>kDJ8Ks`.MxAgrK`M,r$N(Ic
  * Você pode ter várias instalações em um único banco de dados se você der
  * um prefixo único para cada um. Somente números, letras e sublinhados!
  */
-$table_prefix = 'jul20_';
+$table_prefix = 'wp_';
 
 /**
  * Para desenvolvedores: Modo de debug do WordPress.
@@ -88,24 +82,7 @@ $table_prefix = 'jul20_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_LOG', '/var/log/wp-errors.log' );
-define( 'WP_DEBUG_DISPLAY', true );
-
-define('WP_HOME',       'http://localhost');
-define('WP_SITEURL',    'http://localhost');
-
-/**
- * Disable automatic updates and installations from production
- */
-if (strpos(WP_HOME, 'localhost') === false) {
-	define('automatic_updater_disabled', true );
-	define('WP_AUTO_UPDATE_CORE', false );
-	define('DISALLOW_FILE_MODS', true);
-} else {
-    define('FS_METHOD', 'direct');
-}
-
+define( 'WP_DEBUG', false );
 
 /* Isto é tudo, pode parar de editar! :) */
 
