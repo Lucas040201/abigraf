@@ -13,7 +13,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="publisher" content="contato@okngroup.com.brr">
+	<meta name="publisher" content="lucasdasilvamendes123456@hotmail.com">
 	<?php
 
 		get_template_part('template-parts/header/seo');
@@ -40,13 +40,6 @@
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css.map"> -->
 
 
-	<!-- Helpers -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/cdn/Helpers.css">
-	<!--
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/cdn/Message.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/cdn/OKNPagination.css">
-	-->
-
 	<!-- Must Have -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.load.min.js"></script>
@@ -59,7 +52,6 @@
 			vendors : [
                 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
                 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
-				'<?php echo get_template_directory_uri(); ?>/assets/cdn/Helpers.js'
 			],
 			instances : []
 		});
