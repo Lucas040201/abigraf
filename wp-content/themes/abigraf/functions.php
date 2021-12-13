@@ -10,7 +10,6 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package itmidia
  * @since 1.0.0
  */
 
@@ -25,10 +24,6 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require_once (__DIR__ . '/vendor/autoload.php');
 }
 
-/**
- * @todo improve to use namespaces and Helpers be a class
- */
-require_once (__DIR__ . '/src/Helpers.php');
 require_once(__DIR__ . '/inc/post-types.php');
 #require_once(__DIR__ . '/inc/shortcodes/galleries.php');
 #require_once(__DIR__ . '/inc/shortcodes/special-posts-videos.php');
@@ -51,16 +46,6 @@ remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
 remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 remove_action('rest_api_init', 'wp_oembed_register_route');
 remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
-
-/**
- * @bugfix Yoast fix wrong canonical url in production
- *
- * Set canonical URLs on non-production sites to the production URL
- */
-#add_filter( 'wpseo_canonical', function( $canonical ) {
-#	$canonical = preg_replace('#//[^/]*/#U', '//itmorum365.com.br/', trailingslashit( $canonical ) );
-#	return $canonical;
-#});
 
 /**
  * Filter except length to 35 words.
