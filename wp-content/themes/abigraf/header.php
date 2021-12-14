@@ -36,26 +36,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css.map"> -->
-
-
 	<!-- Must Have -->
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.load.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/lib/app.js"></script>
-
-	<script>
-		let app = new App ({
-			host : window.location.protocol + '//' + window.location.host + '/',
-			// You can define default instances or vendors to load in every page filling this next parameters
-			vendors : [
-                'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
-                'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
-			],
-			instances : []
-		});
-	</script>
 
 </head>
 
