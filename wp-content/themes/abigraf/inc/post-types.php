@@ -53,17 +53,12 @@ function ks_register_post_types(){
                 'parent_item_colon'  => __('Eventos pai:'),
                 'not_found'          => __('Nenhum Evento encontrado.'),
                 'not_found_in_trash' => __('Nenhum Evento encontrado na lixeira.')
-            ),
-            'menu_icon' => 'dashicons-admin-site-alt',
-            'description' => __('Eventos'),
+			),
+            'description' => __('Evento'),
             'rest_base' =>'custom/eventos',
             'has_archive' => 'biblioteca/eventos',
-            'rewrite'     => [
-                'slug' => 'eventos',
-            ],
-            'supports'    => array('title', 'editor', 'thumbnail', 'excerpt'),
-            'show_in_rest' => false,  // @info inherited from old version
-        ),
+            'supports'    => array('title', 'editor', 'thumbnail'),
+		),
 
         'tv_abigraf' => array(
             'labels' => array(

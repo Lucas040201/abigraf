@@ -1,20 +1,37 @@
-<?php
-/**
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that other
- * 'pages' on your WordPress site will use a different template.
- *
- * @package UAU
- * @since 1.0.0
- */
+<?php get_header(); ?>
+<aside>
+    <h2>Notícias</h2>
+</aside>
+<main>
+    <?php while (have_posts()) : the_post(); ?>
 
-get_header();
+        <?php
+        $categoryCurrent = get_the_category(get_the_ID());
+        $categoryCurrent = (count($categoryCurrent)) ? $categoryCurrent[0]->name : '';
 
-    while ( have_posts() ) : the_post();
-        $post->post_content = apply_filters( 'the_content', $post->post_content );
-        get_template_part('template-parts/post/content');
-    endwhile;
-    wp_reset_postdata();
+        $date = get_the_date('d/F/Y');
 
-get_footer();
+        $date = explode('/', $date);
+
+        $dateFormated = "$date[0] de $date[1] de $date[2]";
+        ?>
+
+    <?php endwhile; ?>
+    <?php
+
+    /**
+     * Pega as postagens recentes
+     */
+    $args = [
+        'numberposts' => 3,
+        'post_status' => 'publish',
+        'exclude' => get_the_ID()
+    ];
+    $recent_posts = wp_get_recent_posts($args);
+    foreach ($recent_posts as $current) :
+        $category = get_the_category($current['ID']);
+        $category = (count($category)) ? $category[0]->name : '';
+    ?>
+    <?php endforeach; ?>
+</main>
+<?php get_footer(); ?>
