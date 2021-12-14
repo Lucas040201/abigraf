@@ -28,6 +28,7 @@
             <a target="_blank" href="<?php echo get_field('facebook', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/facebook-red.svg" alt=""></a>
         </div>
     </div>
+    <?php wp_footer(); ?>
     <script>
         if (typeof head === 'function' && typeof App === 'function' && typeof app !== 'undefined') {
             head.load(app.getVendors(), function() {
