@@ -54,6 +54,7 @@ get_template_part('template-parts/components/content-aside');
                     ));
                     ?>
                 </div>
+            </div>
         <?php endif; ?>
     </section>
 </main>
