@@ -85,27 +85,27 @@ get_header();
             <div class="slider-agenda">
                 <div class="slider-agenda__card">
                     <article>
-                        <span class="slider-agenda__date"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/calendar.svg" alt="">13/07</span>
-                        <h3>Abigraf Nacional e ABTG</h3>
-                        <p>Programa Capacite-se Palestra - Os Fundamentos do Gerenciamento de Cores na prática</p>
+                        <span class="slider-agenda__date"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/calendar.svg" alt="">14/12</span>
+                        <h3>Abigraf Nacional</h3>
+                        <p>Lançamento TV ABIGRAF</p>
                         <a href="">Saiba mais</a>
                     </article>
                 </div>
 
                 <div class="slider-agenda__card">
                     <article>
-                        <span class="slider-agenda__date"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/calendar.svg" alt="">13/07</span>
-                        <h3>Abigraf Nacional e ABTG</h3>
-                        <p>Programa Capacite-se Palestra - Os Fundamentos do Gerenciamento de Cores na prática</p>
+                        <span class="slider-agenda__date"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/calendar.svg" alt="">24/05</span>
+                        <h3>Evento Apoiado</h3>
+                        <p>FLEXO & LABELS 2022 - Feira Latinoamericana do Segmento Label</p>
                         <a href="">Saiba mais</a>
                     </article>
                 </div>
 
                 <div class="slider-agenda__card">
                     <article>
-                        <span class="slider-agenda__date"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/calendar.svg" alt="">13/07</span>
-                        <h3>Abigraf Nacional e ABTG</h3>
-                        <p>Programa Capacite-se Palestra - Os Fundamentos do Gerenciamento de Cores na prática</p>
+                        <span class="slider-agenda__date"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/calendar.svg" alt="">20/07</span>
+                        <h3>Evento Apoiado</h3>
+                        <p>Future Print 2022</p>
                         <a href="">Saiba mais</a>
                     </article>
                 </div>
