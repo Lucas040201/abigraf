@@ -54,7 +54,7 @@ get_header();
                     <span class="noticias__category">Webinar</span>
                     <h3>Planejamento de vendas para 2022: Como fazer e quais tendências observar</h3>
                     <p>Já estamos na reta final de 2021 e se você ainda não programou as estratégias para 2022, não perca mais tempo, afinal, se você não parar, sentar e desenhar os próximos passos no ano que vem, certamente, você vai continuar fazendo as ações comerciais do mesmo jeito que faz atualmente. Se você não faz nada de diferente, não implementa novas soluções, estratégias e tecnologias, suas vendas ficarão estagnadas. Por isso, separamos algumas dicas:</p>
-                    <a href="#">Leia mais</a>
+                    <a href="#">Leia mais</a> 
                 </div>
                 <div class="noticias__card">
                     <span class="noticias__category">Webinar</span>
