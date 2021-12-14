@@ -5,12 +5,24 @@ get_header();
 <main>
 
     <section class="wrapper main-slider">
-        <a href="" target="_blank">
-            <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/NR12_AN 1.png" alt="">
-        </a>
-        <a href="" target="_blank">
-            <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/NR12_AN 1.png" alt="">
-        </a>
+            <a href="" target="_blank">
+                <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/banner1.jpg" alt="">
+            </a>
+            <a href="" target="_blank">
+                <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/banner2.jpg" alt="">
+            </a>
+            <a href="" target="_blank">
+                <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/banner3.jpg" alt="">
+            </a>
+            <a href="" target="_blank">
+                <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/banner4.jpg" alt="">
+            </a>
+            <a href="" target="_blank">
+                <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/banner5.jpg" alt="">
+            </a>
+            <a href="" target="_blank">
+                <img class="slider-item" src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/banner6.jpg" alt="">
+            </a>
     </section>
     <section class="wrapper regionais-home">
         <div class="regionais-home__text">
