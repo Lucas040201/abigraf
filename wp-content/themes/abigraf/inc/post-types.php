@@ -65,6 +65,76 @@ function ks_register_post_types(){
             'show_in_rest' => false,  // @info inherited from old version
         ),
 
+        'tv_abigraf' => array(
+            'labels' => array(
+                'name'               => __('TV Abigraf'),
+                'singular_name'      => __('TV Abigraf'),
+                'menu_name'          => __('TV Abigraf'),
+                'name_admin_bar'     => __('TV Abigraf'),
+                'add_new'            => __('Novo Video'),
+                'add_new_item'       => __('Novo Video'),
+                'new_item'           => __('Novo Video'),
+                'edit_item'          => __('Editar Video'),
+                'view_item'          => __('Ver Video'),
+                'all_items'          => __('Videos'),
+                'search_items'       => __('Procurar por Videos'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhum Evento encontrado.'),
+                'not_found_in_trash' => __('Nenhum Evento encontrado na lixeira.')
+			),
+            'description' => __('TV Abigraf'),
+            'rest_base' =>'custom/videos',
+            'has_archive' => 'biblioteca/videos',
+            'supports'    => array('title'),
+
+		),
+
+        'apresentacoes' => array(
+            'labels' => array(
+                'name'               => __('Apresentações'),
+                'singular_name'      => __('Apresentações'),
+                'menu_name'          => __('Apresentações'),
+                'name_admin_bar'     => __('Apresentações'),
+                'add_new'            => __('Nova apresentação'),
+                'add_new_item'       => __('Nova apresentação'),
+                'new_item'           => __('Nova apresentação'),
+                'edit_item'          => __('Editar apresentação'),
+                'view_item'          => __('Ver apresentação'),
+                'all_items'          => __('Apresentações'),
+                'search_items'       => __('Procurar por apresentações'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhuma apresentação encontrada.'),
+                'not_found_in_trash' => __('Nenhuma apresentação encontrada na lixeira.')
+			),
+            'description' => __('Apresentações'),
+            'rest_base' =>'custom/apresentacoes',
+            'has_archive' => 'biblioteca/apresentacoes',
+            'supports'    => array('title'),
+		),
+
+        'revistas' => array(
+            'labels' => array(
+                'name'               => __('Revistas'),
+                'singular_name'      => __('Revistas'),
+                'menu_name'          => __('Revistas'),
+                'name_admin_bar'     => __('Revistas'),
+                'add_new'            => __('Nova revista'),
+                'add_new_item'       => __('Nova revista'),
+                'new_item'           => __('Nova revista'),
+                'edit_item'          => __('Editar revista'),
+                'view_item'          => __('Ver revista'),
+                'all_items'          => __('Revistas'),
+                'search_items'       => __('Procurar por Revistas'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhuma revista encontrada.'),
+                'not_found_in_trash' => __('Nenhuma revista encontrada na lixeira.')
+			),
+            'description' => __('Revistas'),
+            'rest_base' =>'custom/revistas',
+            'has_archive' => 'biblioteca/revistas',
+            'supports'    => array('title'),
+		),
+
 		// 'podcast' => array(
 
         //     'labels' => array(
