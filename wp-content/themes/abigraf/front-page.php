@@ -49,7 +49,25 @@ get_header();
                 </a>
             </div>
             <div class="ultimas-noticias">
-                <!-- inserir wp query -->
+                <h3 class="titulo titulo--azul">Últimas Notícias</h3>
+                <div class="noticias__card">
+                    <span class="noticias__category">Webinar</span>
+                    <h3>Planejamento de vendas para 2022: Como fazer e quais tendências observar</h3>
+                    <p>Já estamos na reta final de 2021 e se você ainda não programou as estratégias para 2022, não perca mais tempo, afinal, se você não parar, sentar e desenhar os próximos passos no ano que vem, certamente, você vai continuar fazendo as ações comerciais do mesmo jeito que faz atualmente. Se você não faz nada de diferente, não implementa novas soluções, estratégias e tecnologias, suas vendas ficarão estagnadas. Por isso, separamos algumas dicas:</p>
+                    <a href="#">Leia mais</a>
+                </div>
+                <div class="noticias__card">
+                    <span class="noticias__category">Webinar</span>
+                    <h3>SENAI – FACULDADE DE TECNOLOGIA / PRODUÇÃO GRÁFICA</h3>
+                    <p>Com o reaquecimento do mercado, cada vez mais as indústrias precisam de mão de obra qualificada e de bons profissionais. A ABIGRAF e SINDIGRAF tem como premissa incentivar e apoiar a formação e capacitação de pessoas. Você sabia que a Faculdade de Tecnologia SENAI "Theobaldo De Nigris" atualizou a grade curricular do curso superior de Tecnologia em Produção Gráfica?</p>
+                    <a href="#">Leia mais</a>
+                </div>
+                <div class="noticias__card">
+                    <span class="noticias__category">Webinar</span>
+                    <h3>Segmento têxtil ganha novos contornos</h3>
+                    <p>O Podcast Ondas Impressas, da jornalista Tânia Galluzzi e do consultor Hamilton Costa, conversa com Tiago Ferraresi, responsável pela Top Colors, e com Felipe Sanchez, CEO da Global Química & Moda. Designer de produto, para falar sobre as novidades e tendências da impressão digital na no segmento têxtil.</p>
+                    <a href="#">Leia mais</a>
+                </div>
             </div>
         </div>
         <div class="tvabrigaf-home">
