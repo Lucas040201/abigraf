@@ -58,6 +58,35 @@ function ks_register_post_types(){
             'rest_base' =>'custom/eventos',
             'has_archive' => 'biblioteca/eventos',
             'supports'    => array('title', 'editor', 'thumbnail'),
+            'taxonomy'    => array(
+
+                'eventos_category' => array(
+
+                    'hierarchical'      => true,
+                    'labels'            => array(
+                        'name'              => __('Categorias'),
+                        'singular_name'     => __('Categoria'),
+                        'search_items'      => __('Procurar por categoria'),
+                        'all_items'         => __('Categorias'),
+                        'parent_item'       => __('Categoria Pai'),
+                        'parent_item_colon' => __('Categorias Pai:'),
+                        'edit_item'         => __('Editar Categoria'),
+                        'update_item'       => __('Atualizar Categoria'),
+                        'add_new_item'      => __('Nova Categoria'),
+                        'new_item_name'     => __('Nova Categoria'),
+                        'menu_name'         => __('Categorias'),
+                    ),
+
+                    'show_ui'           => true,
+                    'show_admin_column' => true,
+                    'query_var'         => true,
+                    'rewrite'           => array('slug' => 'eventos_category'),
+                    'show_in_rest'      => true,
+                    'rest_base'         => 'eventos_category'
+
+                ),
+
+            ),
 		),
 
         'tv_abigraf' => array(
@@ -105,6 +134,35 @@ function ks_register_post_types(){
             'rest_base' =>'custom/apresentacoes',
             'has_archive' => 'biblioteca/apresentacoes',
             'supports'    => array('title'),
+            'taxonomy'    => array(
+
+                'apresentacoes_category' => array(
+
+                    'hierarchical'      => true,
+                    'labels'            => array(
+                        'name'              => __('Categorias'),
+                        'singular_name'     => __('Categoria'),
+                        'search_items'      => __('Procurar por categoria'),
+                        'all_items'         => __('Categorias'),
+                        'parent_item'       => __('Categoria Pai'),
+                        'parent_item_colon' => __('Categorias Pai:'),
+                        'edit_item'         => __('Editar Categoria'),
+                        'update_item'       => __('Atualizar Categoria'),
+                        'add_new_item'      => __('Nova Categoria'),
+                        'new_item_name'     => __('Nova Categoria'),
+                        'menu_name'         => __('Categorias'),
+                    ),
+
+                    'show_ui'           => true,
+                    'show_admin_column' => true,
+                    'query_var'         => true,
+                    'rewrite'           => array('slug' => 'apresentacoes_category'),
+                    'show_in_rest'      => true,
+                    'rest_base'         => 'apresentacoes_category'
+
+                ),
+
+            ),
 		),
 
         'revistas' => array(

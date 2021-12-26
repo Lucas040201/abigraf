@@ -11,7 +11,7 @@ get_template_part('template-parts/components/content-aside');
 ?>
 <main>
     <section class="wrapper sobre">
-        <h3 class="titulo">Abigraf Sergipe</h3>
+        <h3 class="titulo"><?php echo get_the_title(); ?></h3>
 
         <article>
             <?php the_content(); ?>
