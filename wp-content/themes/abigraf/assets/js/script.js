@@ -1,36 +1,37 @@
 $(document).ready(function(){
     // Slider Home
-    $('.main-slider').slick({
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    })
+    function sliders () {
+        $('.main-slider').slick({
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        })
+    
+        $('.slider-agenda').slick({
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: false,
+            responsive: [
+                {
+                  breakpoint: 901,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                }
+              ]
+        })
 
-    $('.slider-agenda').slick({
-        arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: false,
-        responsive: [
-            {
-              breakpoint: 901,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              }
-            }
-          ]
-    })
-
-    // Galeria modal
-
-    function modal () {
         $('.modal-slider').slick({
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
         });
-    
+    }
+    sliders();
+
+    function modal () {
         $('.modal-close').on('click', function () {
             $('.modal').removeClass('modal--active');
         });
@@ -60,11 +61,27 @@ $(document).ready(function(){
 
     function accordion () {
         $('.accordion__tab').on('click', function () {
-            $('.accordion__card').removeClass('accordion__card--open');
+            if($(this).parent('.accordion__card').hasClass('accordion__card--open')) {
+                $(this).parent('.accordion__card').removeClass('accordion__card--open')
+            }
             $(this).parent('.accordion__card').addClass('accordion__card--open');
-            $('.accordion__info').hide();
             $(this).siblings('.accordion__info').toggle();
         })
     }
     accordion ()
+
+    function login () {
+        $('.esqueci').on('click', function() {
+            $('.area-exclusiva').hide();
+            $('.esqueci-senha').show();
+        })
+
+        $('.cadastrar').on('click', function() {
+            $('.area-exclusiva').hide();
+            $('.quero-cadastrar').show();
+        })
+
+        $('.cnpj').mask('00.000.000/0000-00')
+    }
+    login ();
 })

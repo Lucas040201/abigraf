@@ -114,6 +114,16 @@ if (function_exists('acf_add_options_page')) {
         'position'   => 2
 
     ));
+    acf_add_options_page(array(
+        'page_title' => 'Menus Seccionais',
+        'menu_title' => 'Menus Seccionais',
+        'menu_slug'  => 'menu-seccionais',
+        'capability' => 'edit_posts',
+        'redirect'   => false,
+        'icon_url'   => 'dashicons-admin-settings',
+        'position'   => 3
+
+    ));
 }
 
 
