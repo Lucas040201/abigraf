@@ -29,8 +29,8 @@ get_header();
             <?php
             $imagemGaleria = get_field('imagem_de_fundo_de_galeria_de_fotos');
             $linkGaleria = get_field('link_galeria_de_fotos');
-            $imagemProducao = get_field('link_guia_de_producao_sustentavel');
-            $linkProducao = get_field('imagem_de_fundo_do_link_de_producao_sustentavel');
+            $linkProducao = get_field('link_guia_de_producao_sustentavel');
+            $imagemProducao = get_field('imagem_de_fundo_do_link_de_producao_sustentavel');
             ?>
             <div class="aside">
                 <?php if (!empty($imagemGaleria) && !empty($linkGaleria)) : ?>
