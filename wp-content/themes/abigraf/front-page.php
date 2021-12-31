@@ -22,11 +22,7 @@ get_header();
             <p><?php echo get_field('texto_regionais'); ?></p>
             <span><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/mapa-gps.svg" alt="">Navegue no mapa e saiba mais</span>
         </div>
-        <a href="">
-            <map name="">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/map-sample.png" alt="">
-            </map>
-        </a>
+       <?php get_template_part('template-parts/components/mapas'); ?>
     </section>
     <section class="wrapper">
         <div class="linknews-home">
