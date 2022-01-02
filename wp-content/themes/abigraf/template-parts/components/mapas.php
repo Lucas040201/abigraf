@@ -186,10 +186,20 @@
         svgs.push(e.getAttribute('id'));
     });
 
-    items.map(e => svgs = svgs.filter(item => item !== e.dataset.estado));
+    items.map(e => {
+        svgs = svgs.filter(item => item !== e.dataset.estado)
+        svgs = svgs.filter(item => {
+            return !document.querySelector('#'+item).classList.contains('nordeste');
+        });
+    });
 
     svgs.map(e => {
         document.querySelector('#'+e).classList.add('gray-path');
+        let link = document.querySelector('#'+e).querySelector('a');
+        if(link) {
+            link.addEventListener('click', e => e.preventDefault());
+            link.style.cursor = 'inherit';
+        }
     });
 
     items.map(e => {
