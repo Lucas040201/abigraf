@@ -7,9 +7,11 @@
  */
 
 get_header();
+get_template_part('template-parts/components/content-aside');
+
 ?>
 <main>
-    <section class="wrapper galeria-presidentes">
+    <section class="wrapper galeria-presidentes-box">
     <?php
         if( have_rows('presidentes') ):
             while( have_rows('presidentes') ) : the_row();
