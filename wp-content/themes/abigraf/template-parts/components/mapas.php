@@ -261,7 +261,6 @@
                 currentLink.setAttribute('xlink:href', links[e.dataset.estado]);
             } else {
                 <?php if(is_front_page()): ?>
-                // console.log('a');
                     currentLink.remove();
                     currentItem.append(currentPath);
                 <?php else:?>

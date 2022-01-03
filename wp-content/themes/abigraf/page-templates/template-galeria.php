@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Template Name: Galeria
+ * Template Name: Template Galeria
  * Template Post Type: page
  * @since 1.0.0
  */
 
-get_header();
+get_header('seccional');
 ?>
 <main>
     <section class="wrapper galeria">
