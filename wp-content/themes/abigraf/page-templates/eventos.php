@@ -29,7 +29,7 @@ get_template_part('template-parts/components/content-aside');
 
         $recent_posts = wp_get_recent_posts($args);
         ?>
-        <div class="eventos__card">
+        <div class="eventos__container">
             <?php
             $postsId = [];
             foreach ($recent_posts as $events) :
