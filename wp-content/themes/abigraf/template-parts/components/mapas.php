@@ -177,8 +177,7 @@
             echo "estado = " . "'".$estado['value']."';";
     endif; 
 
-    if($templateSlug == 'premiacoes'):
-    ?>;
+    if(!empty($templateSlug) && $templateSlug == 'premiacoes'):?>;
 
     const svgG = [... document.querySelectorAll('map svg g')];
     let svgs = []
@@ -203,7 +202,7 @@
     });
 
     items.map(e => {
-        const currentItem = document.querySelector('#' + e.dataset.estado),
+        const currentItem = document.querySelector('#' + e.dataset.estado+':not(.nordeste)'),
         currentItemClass = [...document.querySelectorAll('g.' + e.dataset.estado)],
         image = e;
         if(currentItem) {
@@ -214,12 +213,6 @@
             });
         currentItem.addEventListener('mouseleave', e => {
             image.classList.remove('show');
-        });
-
-        currentItem.querySelector('a').addEventListener('click', e => {
-            e.preventDefault();
-
-            window.open('https://www.google.com.br', '_blank');
         });
 
         }
@@ -268,6 +261,7 @@
                 currentLink.setAttribute('xlink:href', links[e.dataset.estado]);
             } else {
                 <?php if(is_front_page()): ?>
+                // console.log('a');
                     currentLink.remove();
                     currentItem.append(currentPath);
                 <?php else:?>
