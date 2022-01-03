@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-get_header('seccional');
+get_header();
 ?>
 <main>
     <section class="wrapper galeria-presidentes">
