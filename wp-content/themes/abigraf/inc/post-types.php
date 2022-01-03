@@ -165,6 +165,58 @@ function ks_register_post_types(){
             ),
 		),
 
+        'em_acao' => array(
+            'labels' => array(
+                'name'               => __('Abigraf em Ação'),
+                'singular_name'      => __('Abigraf em Ação'),
+                'menu_name'          => __('Abigraf em Ação'),
+                'name_admin_bar'     => __('Abigraf em Ação'),
+                'add_new'            => __('Nova notícia'),
+                'add_new_item'       => __('Nova notícia'),
+                'new_item'           => __('Nova notícia'),
+                'edit_item'          => __('Editar notícia'),
+                'view_item'          => __('Ver notícia'),
+                'all_items'          => __('Notícias'),
+                'search_items'       => __('Procurar por notícias'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhuma notíca encontrada.'),
+                'not_found_in_trash' => __('Nenhuma notíca encontrada na lixeira.')
+			),
+            'description' => __('Noticias de Abigraf em Ação'),
+            'rest_base' =>'custom/em_acao',
+            'has_archive' => 'biblioteca/em_acao',
+            'supports'    => array('title', 'editor', 'thumbnail', 'excerpt'),
+            'taxonomy'    => array(
+
+                'em_acao_category' => array(
+
+                    'hierarchical'      => true,
+                    'labels'            => array(
+                        'name'              => __('Categorias'),
+                        'singular_name'     => __('Categoria'),
+                        'search_items'      => __('Procurar por categoria'),
+                        'all_items'         => __('Categorias'),
+                        'parent_item'       => __('Categoria Pai'),
+                        'parent_item_colon' => __('Categorias Pai:'),
+                        'edit_item'         => __('Editar Categoria'),
+                        'update_item'       => __('Atualizar Categoria'),
+                        'add_new_item'      => __('Nova Categoria'),
+                        'new_item_name'     => __('Nova Categoria'),
+                        'menu_name'         => __('Categorias'),
+                    ),
+
+                    'show_ui'           => true,
+                    'show_admin_column' => true,
+                    'query_var'         => true,
+                    'rewrite'           => array('slug' => 'em_acao_category'),
+                    'show_in_rest'      => true,
+                    'rest_base'         => 'em_acao_category'
+
+                ),
+
+            ),
+		),
+
         'revistas' => array(
             'labels' => array(
                 'name'               => __('Revistas'),
