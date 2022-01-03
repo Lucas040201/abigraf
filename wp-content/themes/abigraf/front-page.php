@@ -18,19 +18,15 @@ get_header();
             <p><?php echo get_field('texto_regionais'); ?></p>
             <span><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/mapa-gps.svg" alt="">Navegue no mapa e saiba mais</span>
         </div>
-        <a href="">
-            <map name="">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ex/map-sample.png" alt="">
-            </map>
-        </a>
+       <?php get_template_part('template-parts/components/mapas'); ?>
     </section>
     <section class="wrapper">
         <div class="linknews-home">
             <?php
             $imagemGaleria = get_field('imagem_de_fundo_de_galeria_de_fotos');
             $linkGaleria = get_field('link_galeria_de_fotos');
-            $imagemProducao = get_field('link_guia_de_producao_sustentavel');
-            $linkProducao = get_field('imagem_de_fundo_do_link_de_producao_sustentavel');
+            $linkProducao = get_field('link_guia_de_producao_sustentavel');
+            $imagemProducao = get_field('imagem_de_fundo_do_link_de_producao_sustentavel');
             ?>
             <div class="aside">
                 <?php if (!empty($imagemGaleria) && !empty($linkGaleria)) : ?>

@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-get_header();
+get_header('seccional');
 get_template_part('template-parts/components/content-aside');
 
 $estado = get_field('estado');
