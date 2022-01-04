@@ -24,7 +24,7 @@ get_template_part('template-parts/components/content-aside');
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = [
-        'post_type' => 'em-acao',
+        'post_type' => 'em_acao',
         'post_status' => 'publish',
         'posts_per_page' => 10,
         'order' => 'DESC',
