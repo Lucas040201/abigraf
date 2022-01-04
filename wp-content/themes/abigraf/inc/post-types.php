@@ -188,6 +188,29 @@ function ks_register_post_types(){
             'supports'    => array('title'),
 		),
 
+        'anuario' => array(
+            'labels' => array(
+                'name'               => __('Anuário'),
+                'singular_name'      => __('Anuário'),
+                'menu_name'          => __('Anuário'),
+                'name_admin_bar'     => __('Anuário'),
+                'add_new'            => __('Nova anuário'),
+                'add_new_item'       => __('Nova anuário'),
+                'new_item'           => __('Nova anuário'),
+                'edit_item'          => __('Editar anuário'),
+                'view_item'          => __('Ver anuário'),
+                'all_items'          => __('Anuários'),
+                'search_items'       => __('Procurar por Anuários'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhuma anuário encontrada.'),
+                'not_found_in_trash' => __('Nenhuma anuário encontrada na lixeira.')
+			),
+            'description' => __('Anuário'),
+            'rest_base' =>'custom/anuario',
+            'has_archive' => 'biblioteca/anuario',
+            'supports'    => array('title'),
+		),
+
         'login' => array(
             'labels' => array(
                 'name'               => __('Login'),
