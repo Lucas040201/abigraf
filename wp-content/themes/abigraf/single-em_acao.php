@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <aside>
-    <h2>Notícias</h2>
+    <h2>Notícias - Abigraf em Ação</h2>
 </aside>
 <main>
     <?php
@@ -44,6 +44,7 @@
         'numberposts' => 3,
         'post_status' => 'publish',
         'exclude' => get_the_ID(),
+        'post_type' => 'em_acao'
     ];
     $recent_posts = wp_get_recent_posts($args);
 
