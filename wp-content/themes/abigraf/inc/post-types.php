@@ -263,6 +263,29 @@ function ks_register_post_types(){
             'supports'    => array('title'),
 		),
 
+        'atividades' => array(
+            'labels' => array(
+                'name'               => __('Relatório de Atividades'),
+                'singular_name'      => __('Relatório de Atividades'),
+                'menu_name'          => __('Relatório de Atividades'),
+                'name_admin_bar'     => __('Relatório de Atividades'),
+                'add_new'            => __('Novo relatório'),
+                'add_new_item'       => __('Novo relatório'),
+                'new_item'           => __('Novo relatório'),
+                'edit_item'          => __('Editar relatório'),
+                'view_item'          => __('Ver relatório'),
+                'all_items'          => __('Relatórios'),
+                'search_items'       => __('Procurar por relatório'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhuma relatório encontrada.'),
+                'not_found_in_trash' => __('Nenhuma relatório encontrada na lixeira.')
+			),
+            'description' => __('Relatório de Atividades'),
+            'rest_base' =>'custom/relatório',
+            'has_archive' => 'biblioteca/relatório',
+            'supports'    => array('title'),
+		),
+
         'login' => array(
             'labels' => array(
                 'name'               => __('Login'),
