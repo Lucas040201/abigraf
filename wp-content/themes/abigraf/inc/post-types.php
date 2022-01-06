@@ -165,6 +165,58 @@ function ks_register_post_types(){
             ),
 		),
 
+        'convencoes' => array(
+            'labels' => array(
+                'name'               => __('Conveções Coletivas'),
+                'singular_name'      => __('Conveções Coletivas'),
+                'menu_name'          => __('Conveções Coletivas'),
+                'name_admin_bar'     => __('Conveções Coletivas'),
+                'add_new'            => __('Nova convenção'),
+                'add_new_item'       => __('Nova convenção'),
+                'new_item'           => __('Nova convenção'),
+                'edit_item'          => __('Editar convenção'),
+                'view_item'          => __('Ver convenção'),
+                'all_items'          => __('Conveções Coletivas'),
+                'search_items'       => __('Procurar por Conveções Coletivas'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhuma convenção encontrada.'),
+                'not_found_in_trash' => __('Nenhuma convenção encontrada na lixeira.')
+			),
+            'description' => __('Conveções Coletivas'),
+            'rest_base' =>'custom/apresentacoes',
+            'has_archive' => 'biblioteca/convencoes',
+            'supports'    => array('title'),
+            // 'taxonomy'    => array(
+
+            //     'apresentacoes_category' => array(
+
+            //         'hierarchical'      => true,
+            //         'labels'            => array(
+            //             'name'              => __('Categorias'),
+            //             'singular_name'     => __('Categoria'),
+            //             'search_items'      => __('Procurar por categoria'),
+            //             'all_items'         => __('Categorias'),
+            //             'parent_item'       => __('Categoria Pai'),
+            //             'parent_item_colon' => __('Categorias Pai:'),
+            //             'edit_item'         => __('Editar Categoria'),
+            //             'update_item'       => __('Atualizar Categoria'),
+            //             'add_new_item'      => __('Nova Categoria'),
+            //             'new_item_name'     => __('Nova Categoria'),
+            //             'menu_name'         => __('Categorias'),
+            //         ),
+
+            //         'show_ui'           => true,
+            //         'show_admin_column' => true,
+            //         'query_var'         => true,
+            //         'rewrite'           => array('slug' => 'apresentacoes_category'),
+            //         'show_in_rest'      => true,
+            //         'rest_base'         => 'apresentacoes_category'
+
+            //     ),
+
+            // ),
+		),
+
         'em_acao' => array(
             'labels' => array(
                 'name'               => __('Abigraf em Ação'),
