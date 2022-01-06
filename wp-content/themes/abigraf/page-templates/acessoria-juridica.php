@@ -8,7 +8,7 @@
 
 get_header();
 ?>
-<?php get_template_part('template-parts/sections/content-aside'); ?>
+<?php get_template_part('template-parts/components/content-aside') ?>
 <main>
     <section class="wrapper juridica">
         <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
