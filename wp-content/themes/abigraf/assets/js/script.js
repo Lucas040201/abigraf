@@ -27,6 +27,7 @@ $(document).ready(function(){
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
+            adaptiveHeight: true,
         });
     }
     sliders();
