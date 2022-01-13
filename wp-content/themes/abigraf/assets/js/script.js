@@ -86,3 +86,13 @@ $(document).ready(function(){
     }
     login ();
 })
+
+
+
+document.querySelectorAll('.tv__card').forEach(e => {
+    
+    const currentLink = e.querySelector('.sby_video_thumbnail'),
+    currentImage = currentLink.getAttribute('data-full-res');
+    e.querySelector('.sb_youtube').style.backgroundImage = "url('"+currentImage+"')";
+  
+});

@@ -14,11 +14,11 @@ get_template_part('template-parts/components/content-aside');
     <section class="wrapper tv">
         <h3 class="titulo">Nossas ações</h3>
         <p> A TV ABIGRAF mostra todas ações das nossas entidades como depoimentos, opiniões, eventos, treinamentos e palestras. </p>
-
+        <?php //the_content();?>
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = [
-            'post_type' => 'tv_abigraf',
+            'post_type' => 'sby_videos',
             'post_status' => 'publish',
             'posts_per_page' => 8,
             'order' => 'DESC',
@@ -38,8 +38,8 @@ get_template_part('template-parts/components/content-aside');
             <div class="tv__container">
                 <?php while ($wp_query->have_posts()) : the_post(); ?>
                     <div class="tv__card">
-                        <iframe width="560" height="315" src="<?php echo get_field('url_do_video'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <span><?php echo get_field('data'); ?></span>
+                        <?php the_content(); ?>
+                        <span><?php echo get_the_date(); ?></span>
                         <hr>
                         <h4><?php echo get_the_title(); ?></h4>
                     </div>
