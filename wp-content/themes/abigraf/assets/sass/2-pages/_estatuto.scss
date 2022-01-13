@@ -1,0 +1,36 @@
+.estatuto {
+    margin: 8rem auto;
+
+    article {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 3rem;
+        color: $font;
+
+        margin-bottom: 6rem;
+    }
+
+    &__link {
+        width: 100%;
+        height: 12rem;
+        background-size: cover;
+
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 3rem;
+        color: $branco;
+
+        display: flex;
+        align-items: center;
+        padding-left: 3.6rem;
+
+        @include sm {
+            padding: 0 2rem;
+            background-position: center center;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+$wrapperWidth: 1113px;
+
+.wrapper {
+	width: 90%;
+	max-width: $wrapperWidth;
+	margin: auto;
+}
+
+@include md{
+    html, body {
+        font-size: 50%;
+    }
+}
+
+@include sm {
+    .wrapper {
+        max-width: 86.41%;
+    }
+}
+
+$vermelho: #DE1026;
+$branco: #fff;
+$amarelo: #FCCF00;
+$amarelo-claro: #FFD465;
+$azul-claro: #1890FF;
+$azul: #12304D;
+$azul-escuro: #0B4173;
+$cinza: #DCDCDC;
+$preto: #000;
+$font: #050000;

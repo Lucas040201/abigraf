@@ -1,0 +1,33 @@
+@import '0-base/reset';
+@import '0-base/utilities';
+
+// layout
+@import '1-layout/defs';
+@import '1-layout/typography';
+@import '1-layout/header';
+@import '1-layout/aside';
+@import '1-layout/footer';
+@import '1-layout/components';
+
+
+// pages
+@import '2-pages/home';
+@import '2-pages/historia';
+@import '2-pages/sobre';
+@import '2-pages/apresentacoes';
+@import '2-pages/carta';
+@import '2-pages/estatuto';
+@import '2-pages/associados';
+@import '2-pages/fale-conosco';
+@import '2-pages/diretoria';
+@import '2-pages/faq';
+@import '2-pages/tv';
+@import '2-pages/revista';
+@import '2-pages/noticia';
+@import '2-pages/eventos';
+@import '2-pages/missao-visao';
+@import '2-pages/associe';
+@import '2-pages/galeria';
+@import '2-pages/login';
+@import '2-pages/premios';
+@import '2-pages/juridico';

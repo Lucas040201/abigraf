@@ -1,0 +1,45 @@
+/* Base com definições globais */
+
+/* == 1: Responsivo */
+
+$screen-small: 500px;
+$screen-tablet: 900px;
+$screen-medium: 1280px;
+$screen-large: 1400px;
+
+@mixin xs {
+    @media (max-width: #{$screen-small}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: #{$screen-medium}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: #{$screen-large}) {
+        @content;
+    }
+}
+
+// Tamanho livre
+@mixin mq($screen) {
+    @media (min-width: $screen+"px") {
+        @content;
+    }
+}
+
+@mixin mqMax($screen) {
+    @media (max-width: $screen+"px") {
+        @content;
+    }
+}

@@ -1,0 +1,19 @@
+aside {
+    background-color: #12304D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11.4rem;
+
+    @include sm {
+        padding: 0 2rem;
+    }
+
+    h2 {
+        font-family: $kanit;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $branco;
+        text-align: center;
+    }
+}

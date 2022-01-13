@@ -1,0 +1,90 @@
+.fale-conosco {
+    margin: 6.1rem auto 13.8rem;
+
+    p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    &__container {
+        margin-top: 4.4rem;
+
+        display: flex;
+        justify-content: space-between;
+        column-gap: 3rem;
+
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        background-color: $amarelo-claro;
+        max-width: 44.5rem;
+        width: 100%;
+        padding: 3.7rem 3.1rem;
+
+        @include sm {
+            max-width: 100%;
+            margin-top: 10rem;
+        }
+
+        address {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            display: flex;
+            flex-direction: column;
+            
+            strong {
+                font-style: 1.8rem;
+                font-weight: 700;
+                color: $azul-escuro;
+                margin: 2.4rem 0;
+            }
+
+            i {
+                font-size: 1.6rem;
+                font-weight: 600;
+                font-style: normal;
+                color: $vermelho;
+                margin: 0 0 2.4rem;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 3rem;
+
+        & input, & textarea {
+            width: 100%;
+            height: 4.4rem;
+            border: .1rem solid #635E5E;
+            padding-left: 1.7rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #5B5B5B;
+            outline: none;
+        }
+
+        & textarea {
+            padding: 1.2rem 1.7rem;
+            height: 18rem;
+            resize: none;
+        }
+
+        span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $vermelho;
+        }
+
+        .button {
+            margin-left: auto;
+        }
+    }
+}

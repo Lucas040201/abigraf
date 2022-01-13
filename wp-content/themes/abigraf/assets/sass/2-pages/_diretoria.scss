@@ -1,0 +1,33 @@
+.diretoria {
+    margin: 6.1rem auto 17.5rem;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 6.5rem;
+
+        h4 {
+            font-family: $kanit;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 4.8rem;
+            color: $azul;
+            margin-bottom: 1.2rem;
+        }
+
+        article {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            margin-bottom: 2.5rem;
+
+            span {
+                font-size: 1.6rem;
+                display: block;
+            }
+        }
+    }
+
+    &__card:not(:last-of-type) {
+        margin-right: 15rem;
+    }
+}

@@ -1,0 +1,97 @@
+.revista {
+    margin: 6.1rem auto 5rem;
+
+    article {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        white-space: pre-line;
+    }
+
+    &__container {
+        margin: 6.3rem auto 8.1rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 6rem;
+        row-gap: 7.9rem;
+
+        @include sm {
+            justify-content: center;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 32rem;
+                height: 42rem;
+                object-fit: cover;
+                margin-bottom: 3rem;
+            }
+
+            span {
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 1.6rem;
+                color: $azul;
+            }
+
+            hr {
+                border: none;
+                border-bottom: .3rem solid $amarelo;
+                margin: 1.5rem 0 .9rem;
+            }
+
+            h4 {
+                font-size: 2.1rem;
+                font-weight: 700;
+                line-height: 3rem;
+                color: $vermelho;
+            }
+
+            .button {
+                margin-top: 3.2rem;
+            }
+        }
+    }
+}
+
+.faixa-cinza {
+    background-color: #F3F3F2;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include sm {
+            padding: 2rem;
+        }
+
+        & > img {
+            margin-left: auto;
+        }
+
+        span {
+            font-family: $kanit;
+            font-weight: 500;
+            font-size: 1.8rem;
+            color: $vermelho;
+
+            display: flex;
+            align-items: center;
+
+            margin-right: 7.1rem;
+
+            @include sm {
+                &:not(:last-of-type) {
+                    margin: 0 0 2rem 0;
+                }
+            }
+
+            img {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

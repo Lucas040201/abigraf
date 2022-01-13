@@ -1,0 +1,148 @@
+.premios {
+    margin-top: 6.1rem;
+
+    &-interna {
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 6.1rem 0 2rem;
+        }
+    
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 3.2rem;
+            row-gap: 3rem;
+
+            @include sm {
+                flex-wrap: wrap;
+            }
+
+            img {
+                max-width: 63.5rem;
+                width: 100%;
+                object-fit: cover;
+
+                @include sm {
+                    max-width: 100%;
+                }
+            }
+
+            h4 {
+                font-family: $kanit;
+                font-size: 3.6rem;
+                font-weight: 500;
+                line-height: 4.5rem;
+                color: $azul-escuro;
+            }
+        }
+
+        article {
+            font-weight: 400;
+        }
+    }
+
+    &__conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 5.8rem auto;
+
+        @include sm {
+            row-gap: 3rem;
+        }
+        
+        article {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+            max-width: 34.6rem;
+            width: 100%;
+
+            span {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #DE1026;
+                margin-bottom: 2.5rem;
+                display: block;
+            }
+        }
+    }
+}
+
+.imagem-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 2.5rem;
+    margin: 4.4rem auto 0;
+
+    img {
+        max-width: 44.2rem;
+        width: 100%;
+        height: 22rem;
+        object-fit: cover;
+
+        @include sm {
+            max-width: 100% !important;
+        }
+
+        &:nth-of-type(3) {
+            max-width: 63rem;
+            height: 21.7rem;
+        }
+
+        &:nth-of-type(4) {
+            max-width: 25.5rem;
+            height: 21.7rem;
+        }
+    }
+}
+
+.faixa-amarela--premios {
+    padding: 5rem 0 6.6rem;
+
+    .titulo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6.5rem;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include sm {
+            row-gap: 3rem;
+            column-gap: 3rem;
+        }
+    }
+
+    .faixa-amarela__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        span {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $preto;
+            text-align: center;
+        }
+
+        img {
+            margin: 1.8rem auto 1.6rem;
+        }
+
+        strong {
+            font-family: $kanit;
+            font-size: 3.6rem;
+            font-weight: 500;
+            color: $preto;
+            text-align: center;
+        }
+    }
+}

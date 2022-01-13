@@ -1,0 +1,36 @@
+.apresentacoes {
+    margin: 6.1rem auto 7.7rem;
+
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        
+        padding: 0 2.6rem 3.2rem 0;
+        border-bottom: .1rem solid $cinza;
+
+        &:not(:last-of-type) {
+            margin-bottom: 3.2rem;
+        }
+
+        span {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $azul;
+            width: 100%;
+        }
+
+        h4 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $vermelho;
+            max-width: 70rem;
+            margin-top: 1.4rem;
+
+            @include sm {
+                margin-bottom: 1.4rem;
+            }
+        }
+    }
+}

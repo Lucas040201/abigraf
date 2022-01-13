@@ -1,0 +1,70 @@
+.tv {
+    margin: 6.1rem auto 8.8rem;
+
+    p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4.1rem 0 8.4rem;
+        column-gap: 4rem;
+        row-gap: 5rem;
+    }
+
+    &__card {
+        max-width: 52rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include sm {
+            max-width: 45rem;
+        }
+
+        & > div {
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 31.5rem;
+
+            @include sm {
+                height: 23rem;
+            }
+        }
+
+        span {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $azul;
+            margin-top: 3.7rem;
+        }
+
+        hr {
+            margin: .5rem 0 .9rem;
+            border: none;
+            border-bottom: .3rem solid $amarelo;
+        }
+
+        h4 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            line-height: 3rem;
+            color: $vermelho;
+        }
+
+        p {
+            display: none;
+        }
+
+        // plugin
+
+        .sby {
+            &_video_thumbnail:after, &_info_single {
+                display: none;
+            }
+        }
+    }
+}

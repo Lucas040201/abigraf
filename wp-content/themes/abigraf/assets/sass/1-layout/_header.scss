@@ -1,0 +1,251 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;
+
+    &__top {
+        background-color: $vermelho;
+        height: 4rem;
+
+        @include sm {
+            height: 60px;
+        }
+        
+        .wrapper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
+
+        a {
+            max-width: 2rem;
+
+            @include sm {
+                max-width: 3rem;
+            }
+
+            &:not(:last-of-type) {
+                margin-right: 2.6rem;
+            }
+
+            &:last-of-type {
+                margin-left: 15.4rem;
+
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__mid {
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3.8rem auto 4rem;
+        }
+
+        h1 {
+            font-size: 0;
+
+            img {
+                max-width: 21.3rem;
+
+                @include sm {
+                    width: 136px;
+                    height: 46px;
+                }
+            }
+        }
+
+        .form {
+            &__text {
+                font-size: 1.6rem;
+                color: #000;
+                border: none;
+                border-bottom: .1rem solid $preto;
+                padding-bottom: 1.2rem;
+                width: 43.4rem;
+                height: 3rem;
+
+                @include sm {
+                    width: 165px;
+                    height: 38px;
+                }
+            }
+    
+            &__submit {
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 2rem;
+
+                @include sm {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+    
+            &__box {
+                position: relative;
+            }
+        }
+    }
+
+    .nav {
+        margin-bottom: 2.4rem;
+
+        @include sm {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            list-style: none;
+
+            li {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $preto;
+                position: relative;
+
+                &:hover {
+                    .nav__submenu {
+                        display: flex;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -.5rem;
+                        left: 0;
+                        width: 100%;
+                        height: .3rem;
+                        background-color: $amarelo;
+                    }
+                }
+            }
+        }
+
+        &__submenu {
+            display: none;
+            flex-direction: column;
+
+            position: absolute;
+            padding-top: 4rem;
+            top: .3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 26.5rem;
+            z-index: 9999;
+
+            &--dual {
+                flex-wrap: wrap;
+                max-height: 36rem;
+                width: 22rem;
+                left: -5rem;
+            }
+            
+            a {
+                background-color: $vermelho;
+                padding: .9rem 1.6rem .9rem 4.8rem;
+                color: $branco;
+                font-weight: 600;
+                width: 100%;
+                min-height: 4rem;
+                margin: 0;
+            }
+        }
+
+        &__mobile {
+            display: block;
+            position: absolute;
+            top: 100%;
+            max-width: 375px;
+            width: 100%;
+            background-color: $vermelho;
+            -webkit-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.3);
+            -moz-box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.3);
+            box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.3);
+            margin: 0;
+
+            .wrapper {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 17px 31px 26px;
+
+                li {
+                    color: $branco;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    padding-bottom: 29px;
+
+                    &:hover::after {
+                        content: none;
+                    }
+
+                    & > a {
+                        &::after {
+                            content: '';
+                            margin-left: 11px;
+                            border: 1px solid $amarelo;
+                            border-width: 2px 2px 0 0px;
+                            width: 10px;
+                            height: 10px;
+                            display: inline-block;
+                            transform: rotate(45deg);
+                            transition: .3s all;
+                        }
+
+                        &:hover {
+                            color: $amarelo;
+
+                            &::after {
+                                transform: rotate(135deg) translateY(5px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nav__submenu {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                left: -30px;
+                transform: none;
+                width: 100%;
+
+                a {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        @include sm {
+            display: block;
+        }
+
+        display: none;
+        margin-right: auto;
+    }
+}

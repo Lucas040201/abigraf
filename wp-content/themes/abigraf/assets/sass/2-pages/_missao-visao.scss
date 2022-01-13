@@ -1,0 +1,61 @@
+.faixa-amarela--objetivos {
+    display: flex;
+    .wrapper {
+        margin: 4.2rem auto;
+    }
+
+    article {
+        ul {
+            list-style: none;
+
+            li {
+                font-size: 1.8rem;
+                font-weight: 600;
+                line-height: 2.4rem;
+                color: $font;
+                position: relative;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 2.4rem;
+                }
+
+                &::before {
+                    content: '';
+                    background-image: url(../images/icons/check.svg);
+                    width: 2.4rem;
+                    height: 2.4rem;
+
+                    position: absolute;
+                    top: 0;
+                    left: -3.6rem;
+                }
+            }
+        }
+    }
+}
+
+.acoes {
+    img {
+        margin: 5rem auto;
+        @include sm {
+            display: none;
+        }
+    }
+    article {
+        display: none;
+        margin: 3rem auto 5rem;
+
+        @include sm {
+            display: block;
+        }
+
+        p {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.4rem;
+            border-bottom: .1rem solid $amarelo;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}

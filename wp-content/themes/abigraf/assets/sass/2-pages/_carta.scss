@@ -1,0 +1,23 @@
+.carta {
+    margin: 6.1rem auto 5.1rem;
+    
+    &__container {
+        background-color: #F3F3F2;
+        padding: 5.3rem 9.5rem 2.5rem;
+
+        @include sm {
+            padding: 2.5rem 1.5rem;
+        }
+
+        img {
+            margin: 0 auto 4.4rem;
+            display: block;
+        }
+
+        article {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            white-space: pre-line;
+        }        
+    }
+}
