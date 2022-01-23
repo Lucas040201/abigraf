@@ -338,26 +338,26 @@ function ks_register_post_types(){
             'supports'    => array('title'),
 		),
 
-        'login' => array(
+        'associados' => array(
             'labels' => array(
-                'name'               => __('Login'),
-                'singular_name'      => __('Login'),
-                'menu_name'          => __('Login'),
-                'name_admin_bar'     => __('Login'),
-                'add_new'            => __('Novo Login'),
-                'add_new_item'       => __('Novo Login'),
-                'new_item'           => __('Novo Login'),
-                'edit_item'          => __('Editar Login'),
-                'view_item'          => __('Ver Login'),
-                'all_items'          => __('Logins'),
-                'search_items'       => __('Procurar por Logins'),
-                'not_found'          => __('Nenhum Login encontrado.'),
-                'not_found_in_trash' => __('Nenhum Login encontrado na lixeira.')
+                'name'               => __('Associados'),
+                'singular_name'      => __('Associado'),
+                'menu_name'          => __('Associados'),
+                'name_admin_bar'     => __('Associados'),
+                'add_new'            => __('Novo Associado'),
+                'add_new_item'       => __('Novo Associado'),
+                'new_item'           => __('Novo Associado'),
+                'edit_item'          => __('Editar Associado'),
+                'view_item'          => __('Ver Associado'),
+                'all_items'          => __('Associados'),
+                'search_items'       => __('Procurar por Associados'),
+                'not_found'          => __('Nenhum Associado encontrado.'),
+                'not_found_in_trash' => __('Nenhum Associado encontrado na lixeira.')
 			),
-            'description' => __('Login'),
-            'rest_base' =>'custom/login',
-            'has_archive' => 'biblioteca/logins',
-            'supports'    => array('title', 'editor', 'excerpt'),
+            'description' => __('Associado'),
+            'rest_base' =>'custom/associado',
+            'has_archive' => 'biblioteca/associados',
+            'supports'    => array('title'),
 		),
 
 		// 'podcast' => array(

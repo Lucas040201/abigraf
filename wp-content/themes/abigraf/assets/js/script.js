@@ -72,6 +72,11 @@ $(document).ready(function(){
     accordion ()
 
     function login () {
+        // Esvaziar campos
+        $('.acf-input-wrap input').val('')
+        // Sumir com o campo de data
+        $('div[data-name=data_de_matricula]').hide()
+
         $('.esqueci').on('click', function() {
             $('.area-exclusiva').hide();
             $('.esqueci-senha').show();
