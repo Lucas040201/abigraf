@@ -317,31 +317,77 @@ function formulario_cadastro(){
 add_shortcode('associados', 'formulario_cadastro');
 
 /* Pegar os dados do formulario e gravar no wordress*/
+
+// function salvar_formulario($post_id){
+
+// 	if($post_id != 'associados'){
+// 		return $post_id;
+// 	}
+
+// 	$empresa = $_POST['acf']['field_61ed5deafa307'];
+// 	$cnpj_cpf = $_POST['acf']['field_61ed5df4fa308'];
+
+// 	$cep = $_POST['acf']['field_61ed5e1ffa30a'];
+// 	$rua = $_POST['acf']['field_61ed5e3cfa30b'];
+// 	$numero = $_POST['acf']['field_61ed5e44fa30c'];
+// 	$bairro = $_POST['acf']['field_61ed5e4bfa30d'];
+// 	$cidade = $_POST['acf']['field_61ed5e52fa30e'];
+// 	$estado = $_POST['acf']['field_61ed5e59fa30f'];
+// 	$complemento = $_POST['acf']['field_61ed5e5ffa310'];
+
+// 	$nome_contato = $_POST['acf']['field_61ed5e70fa312'];
+// 	$email_contato = $_POST['acf']['field_61ed5e75fa313'];
+// 	$senha = $_POST['acf']['field_61edd872d8025'];
+
+// 	$numero_empregados = $_POST['acf']['field_61ed5e98fa315'];
+// 	$cod_atividades = $_POST['acf']['field_61ed5ea8fa316'];
+// 	$data_matricula = date("d/m/Y");
+// 	$codigo_matricula = $_POST['acf']['field_61ed5ebdfa318'];
+
+// 	$post = array(
+// 		'post_status' => 'publish',
+// 		'post_title' => $empresa . ' | ' . $cnpj_cpf,
+// 		'post_type' => 'associados'
+// 	);
+
+// 	$id = wp_insert_post($post);
+
+//     update_field('field_61ed5deafa307', $empresa, $id);
+// 	update_field('field_61ed5df4fa308', $cnpj_cpf, $id);
+
+// 	update_field('field_61ed5e1ffa30a', $cep, $id);
+// 	update_field('field_61ed5e3cfa30b', $rua, $id);
+// 	update_field('field_61ed5e44fa30c', $numero, $id);
+// 	update_field('field_61ed5e4bfa30d', $bairro, $id);
+// 	update_field('field_61ed5e52fa30e', $cidade, $id);
+// 	update_field('field_61ed5e59fa30f', $estado, $id);
+// 	update_field('field_61ed5e5ffa310', $complemento, $id);
+
+// 	update_field('field_61ed5e70fa312', $nome_contato, $id);
+// 	update_field('field_61ed5e75fa313', $email_contato, $id);
+// 	update_field('field_61edd872d8025', $senha, $id);
+
+// 	update_field('field_61ed5e98fa315', $numero_empregados, $id);
+// 	update_field('field_61ed5ea8fa316', $cod_atividades, $id);
+// 	update_field('field_61ed5eb0fa317', $data_matricula, $id);
+// 	update_field('field_61ed5ebdfa318', $codigo_matricula, $id);
+
+// 	do_action("acf/save_post", $post_id);
+
+// 	return $post_id;
+// }
+
 function salvar_formulario($post_id){
 
 	if($post_id != 'associados'){
 		return $post_id;
 	}
 
-	$empresa = $_POST['acf']['field_61ed5deafa307'];
-	$cnpj_cpf = $_POST['acf']['field_61ed5df4fa308'];
-
-	$cep = $_POST['acf']['field_61ed5e1ffa30a'];
-	$rua = $_POST['acf']['field_61ed5e3cfa30b'];
-	$numero = $_POST['acf']['field_61ed5e44fa30c'];
-	$bairro = $_POST['acf']['field_61ed5e4bfa30d'];
-	$cidade = $_POST['acf']['field_61ed5e52fa30e'];
-	$estado = $_POST['acf']['field_61ed5e59fa30f'];
-	$complemento = $_POST['acf']['field_61ed5e5ffa310'];
-
-	$nome_contato = $_POST['acf']['field_61ed5e70fa312'];
-	$email_contato = $_POST['acf']['field_61ed5e75fa313'];
-	$senha = $_POST['acf']['field_61edd872d8025'];
-
-	$numero_empregados = $_POST['acf']['field_61ed5e98fa315'];
-	$cod_atividades = $_POST['acf']['field_61ed5ea8fa316'];
-	$data_matricula = date("d/m/Y");
-	$codigo_matricula = $_POST['acf']['field_61ed5ebdfa318'];
+	$empresa = $_POST['nomeempresa'];
+	$cnpj_cpf = $_POST['cnpj'];
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
+	$senha = $_POST['senha'];
 
 	$post = array(
 		'post_status' => 'publish',
@@ -353,23 +399,9 @@ function salvar_formulario($post_id){
 
     update_field('field_61ed5deafa307', $empresa, $id);
 	update_field('field_61ed5df4fa308', $cnpj_cpf, $id);
-
-	update_field('field_61ed5e1ffa30a', $cep, $id);
-	update_field('field_61ed5e3cfa30b', $rua, $id);
-	update_field('field_61ed5e44fa30c', $numero, $id);
-	update_field('field_61ed5e4bfa30d', $bairro, $id);
-	update_field('field_61ed5e52fa30e', $cidade, $id);
-	update_field('field_61ed5e59fa30f', $estado, $id);
-	update_field('field_61ed5e5ffa310', $complemento, $id);
-
-	update_field('field_61ed5e70fa312', $nome_contato, $id);
-	update_field('field_61ed5e75fa313', $email_contato, $id);
+	update_field('field_61ed5e70fa312', $nome, $id);
+	update_field('field_61ed5e75fa313', $email, $id);
 	update_field('field_61edd872d8025', $senha, $id);
-
-	update_field('field_61ed5e98fa315', $numero_empregados, $id);
-	update_field('field_61ed5ea8fa316', $cod_atividades, $id);
-	update_field('field_61ed5eb0fa317', $data_matricula, $id);
-	update_field('field_61ed5ebdfa318', $codigo_matricula, $id);
 
 	do_action("acf/save_post", $post_id);
 
@@ -401,21 +433,21 @@ function login_formulario() {
     if ($user_query->have_posts()) {
         while($user_query->have_posts()){
             $user_query->the_post();
-
             $user = get_post();
-            
             $password = get_post_meta($user->ID, 'senha', true);
 
-            echo get_the_title(); 
-
-            if ($login_password == $password) { 
-                echo "Logado com sucesso.";
+            if ($login_password == $password) {
+                echo 
+                '<script>
+                    window.location.href = "'. home_url() .'/dados-economicos/";
+                    sessionStorage.setItem("logado", "logado");
+                </script>';
             } else { 
-                echo "Senha incorreta"; 
+                echo '<script>alert("Senha incorreta")</script>';
             }
         }
     }else {
-        echo 'E-mail não existente.';
+        echo '<script>alert("E-mail não cadastrado")</script>';
     }
 
     wp_reset_postdata();

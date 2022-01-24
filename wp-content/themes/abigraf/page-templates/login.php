@@ -41,12 +41,10 @@ get_header();
         <div class="quero-cadastrar">
             <h3 class="titulo">Quero me cadastrar</h3>
 
-            <?php do_shortcode('[associados]')?>
-
             <form action="" method="post" name="novo_login" id="novo_login">
                 <h4>Dados do Associado</h4>
-                <input class="input input-full cnpj" minlength="18" maxlength="18" type="text" name="cnpj" id="" placeholder="CNPJ *" required>
-                <input class="input input-full" type="text" name="NOME" id="" placeholder="Nome da empresa  *" required>
+                <input class="input input-full cnpj" minlength="18" maxlength="18" type="text" name="cnpj" id="" placeholder="CNPJ ou CPF *" required>
+                <input class="input input-full" type="text" name="nomeempresa" id="" placeholder="Nome da empresa  *" required>
 
                 <h4>Dados de Acesso</h4>
 
@@ -57,7 +55,7 @@ get_header();
                 <span>Sua senha deve conter de 8 a 20 caracteres</span>
 
                 <div class="links">
-                    <input class="button" type="submit" value="Cadastrar">
+                    <?php echo do_shortcode('[associados]'); ?>
                 </div>
             </form>
         </div>

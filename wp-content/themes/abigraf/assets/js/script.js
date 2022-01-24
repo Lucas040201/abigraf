@@ -1,3 +1,7 @@
+$(window).on('load', function() {
+    $('body').css('opacity', '1')
+})
+
 $(document).ready(function(){
     // Slider Home
     function sliders () {
@@ -87,7 +91,27 @@ $(document).ready(function(){
             $('.quero-cadastrar').show();
         })
 
-        $('.cnpj').mask('00.000.000/0000-00')
+        // mascaras
+
+        $('.cnpj').mask('000.000.000-00', {
+            onKeyPress : function(cpfcnpj, e, field, options) {
+              const masks = ['000.000.000-000', '00.000.000/0000-00'];
+              const mask = (cpfcnpj.length > 14) ? masks[1] : masks[0];
+              $('.cnpj').mask(mask, options);
+            }
+        });
+
+        // checar se esta logado
+        if ('logado' in sessionStorage) {
+            
+        } else {
+            if(window.location.pathname == '/login/' || window.location.pathname == '/dados-economicos/' || window.location.pathname == '/apresentacoes/' || window.location.pathname == '/boletins/') {
+                $(window).on('load', function() {
+                    $('body').css('opacity', '0')
+                })
+                window.location.href = window.location.origin
+            }
+        }
     }
     login ();
 })

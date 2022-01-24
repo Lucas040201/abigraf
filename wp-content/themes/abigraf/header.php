@@ -41,7 +41,7 @@
 
 </head>
 
-<body <?php body_class($post->post_name ?? ''); ?>>
+<body <?php body_class($post->post_name ?? ''); ?> style="opacity: 0;">
 	<?php
 	get_template_part('inc/analytics/analytics-noscript');
 	get_template_part('template-parts/navigation/menu');

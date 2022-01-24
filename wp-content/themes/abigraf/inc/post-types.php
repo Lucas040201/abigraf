@@ -165,6 +165,29 @@ function ks_register_post_types(){
             ),
 		),
 
+        'boletins' => array(
+            'labels' => array(
+                'name'               => __('Boletins'),
+                'singular_name'      => __('Boletins'),
+                'menu_name'          => __('Boletins'),
+                'name_admin_bar'     => __('Boletins'),
+                'add_new'            => __('Novo boletim'),
+                'add_new_item'       => __('Novo boletim'),
+                'new_item'           => __('Novo boletim'),
+                'edit_item'          => __('Editar boletim'),
+                'view_item'          => __('Ver boletim'),
+                'all_items'          => __('Boletins'),
+                'search_items'       => __('Procurar por Boletins'),
+                'parent_item_colon'  => __('Videos pai:'),
+                'not_found'          => __('Nenhumo boletim encontrada.'),
+                'not_found_in_trash' => __('Nenhumo boletim encontrada na lixeira.')
+			),
+            'description' => __('Boletins'),
+            'rest_base' =>'custom/Boletins',
+            'has_archive' => 'biblioteca/Boletins',
+            'supports'    => array('title'),
+		),
+
         'convencoes' => array(
             'labels' => array(
                 'name'               => __('Conveções Coletivas'),
