@@ -105,7 +105,7 @@ $(document).ready(function(){
         if ('logado' in sessionStorage) {
             
         } else {
-            if(window.location.pathname == '/login/' || window.location.pathname == '/dados-economicos/' || window.location.pathname == '/apresentacoes/' || window.location.pathname == '/boletins/') {
+            if(window.location.pathname == '/dados-economicos/' || window.location.pathname == '/apresentacoes/' || window.location.pathname == '/boletins/') {
                 $(window).on('load', function() {
                     $('body').css('opacity', '0')
                 })

@@ -308,74 +308,12 @@ function formulario_cadastro(){
 			'post_type' => 'associados',
 			'post_status' => 'publish'
 		),
-		'updated_message' => 'Cadastrdo com sucesso. Obrigado',
 		'submit_value' => 'Cadastrar'
 	));
 
 }
 
 add_shortcode('associados', 'formulario_cadastro');
-
-/* Pegar os dados do formulario e gravar no wordress*/
-
-// function salvar_formulario($post_id){
-
-// 	if($post_id != 'associados'){
-// 		return $post_id;
-// 	}
-
-// 	$empresa = $_POST['acf']['field_61ed5deafa307'];
-// 	$cnpj_cpf = $_POST['acf']['field_61ed5df4fa308'];
-
-// 	$cep = $_POST['acf']['field_61ed5e1ffa30a'];
-// 	$rua = $_POST['acf']['field_61ed5e3cfa30b'];
-// 	$numero = $_POST['acf']['field_61ed5e44fa30c'];
-// 	$bairro = $_POST['acf']['field_61ed5e4bfa30d'];
-// 	$cidade = $_POST['acf']['field_61ed5e52fa30e'];
-// 	$estado = $_POST['acf']['field_61ed5e59fa30f'];
-// 	$complemento = $_POST['acf']['field_61ed5e5ffa310'];
-
-// 	$nome_contato = $_POST['acf']['field_61ed5e70fa312'];
-// 	$email_contato = $_POST['acf']['field_61ed5e75fa313'];
-// 	$senha = $_POST['acf']['field_61edd872d8025'];
-
-// 	$numero_empregados = $_POST['acf']['field_61ed5e98fa315'];
-// 	$cod_atividades = $_POST['acf']['field_61ed5ea8fa316'];
-// 	$data_matricula = date("d/m/Y");
-// 	$codigo_matricula = $_POST['acf']['field_61ed5ebdfa318'];
-
-// 	$post = array(
-// 		'post_status' => 'publish',
-// 		'post_title' => $empresa . ' | ' . $cnpj_cpf,
-// 		'post_type' => 'associados'
-// 	);
-
-// 	$id = wp_insert_post($post);
-
-//     update_field('field_61ed5deafa307', $empresa, $id);
-// 	update_field('field_61ed5df4fa308', $cnpj_cpf, $id);
-
-// 	update_field('field_61ed5e1ffa30a', $cep, $id);
-// 	update_field('field_61ed5e3cfa30b', $rua, $id);
-// 	update_field('field_61ed5e44fa30c', $numero, $id);
-// 	update_field('field_61ed5e4bfa30d', $bairro, $id);
-// 	update_field('field_61ed5e52fa30e', $cidade, $id);
-// 	update_field('field_61ed5e59fa30f', $estado, $id);
-// 	update_field('field_61ed5e5ffa310', $complemento, $id);
-
-// 	update_field('field_61ed5e70fa312', $nome_contato, $id);
-// 	update_field('field_61ed5e75fa313', $email_contato, $id);
-// 	update_field('field_61edd872d8025', $senha, $id);
-
-// 	update_field('field_61ed5e98fa315', $numero_empregados, $id);
-// 	update_field('field_61ed5ea8fa316', $cod_atividades, $id);
-// 	update_field('field_61ed5eb0fa317', $data_matricula, $id);
-// 	update_field('field_61ed5ebdfa318', $codigo_matricula, $id);
-
-// 	do_action("acf/save_post", $post_id);
-
-// 	return $post_id;
-// }
 
 function salvar_formulario($post_id){
 
@@ -395,17 +333,36 @@ function salvar_formulario($post_id){
 		'post_type' => 'associados'
 	);
 
-	$id = wp_insert_post($post);
+    $cnpj_query = new WP_Query(array( 
+        'posts_per_page' => 1, 
+        'post_type' => 'associados',
+        'meta_query'	=> array(
+            'relation'		=> 'OR',
+            array(
+                'key'		=> 'cnpj_ou_cpf',
+                'value'		=> $cnpj_cpf,
+                'compare'	=> 'LIKE'
+            )
+        )
+    ));
 
-    update_field('field_61ed5deafa307', $empresa, $id);
-	update_field('field_61ed5df4fa308', $cnpj_cpf, $id);
-	update_field('field_61ed5e70fa312', $nome, $id);
-	update_field('field_61ed5e75fa313', $email, $id);
-	update_field('field_61edd872d8025', $senha, $id);
+    // Checar se o cnpj existe
+    if ($cnpj_query->have_posts()) {
+        while($cnpj_query->have_posts()){
+            $id = wp_insert_post($post);
 
-	do_action("acf/save_post", $post_id);
-
-	return $post_id;
+            update_field('field_61ed5deafa307', $empresa, $id);
+            update_field('field_61ed5df4fa308', $cnpj_cpf, $id);
+            update_field('field_61ed5e70fa312', $nome, $id);
+            update_field('field_61ed5e75fa313', $email, $id);
+            update_field('field_61edd872d8025', $senha, $id);
+        
+            do_action("acf/save_post", $post_id);
+        
+        }
+    }else {
+        echo '<script>window.location.href = "google.com";</script>';
+    }
 }
 
 add_filter('acf/pre_save_post', 'salvar_formulario');
@@ -417,7 +374,7 @@ function login_formulario() {
     // Encontrar um post com os valores do acf
 
     $user_query = new WP_Query(array( 
-        'posts_per_page' => -1, 
+        'posts_per_page' => 1, 
         'post_type' => 'associados',
         'meta_query'	=> array(
             'relation'		=> 'OR',
@@ -460,14 +417,28 @@ if(array_key_exists('logar',$_POST)){
 // Esqueci a senha
 
 function yourdomain_save_post() {
-	// Vars
+    $user_query = new WP_Query(array( 
+        'posts_per_page' => 1, 
+        'post_type' => 'associados',
+    ));
+    
+    if ($user_query->have_posts()) {
+        while($user_query->have_posts()){
+            $user_query->the_post();
+            $user = get_post();
+            $password = get_post_meta($user->ID, 'senha', true);
+        }
+    }
+
 	$toEmail = $_POST['esqueciemail'];
 	$subject = 'Recuperação de senha';		
-	$body    = 'Abaixo o link para recuperar a sua senha';
+	$body    = 'Sua senha é: '. $password .'';
 	$from    = 'contato@abigraf.com.br';
 	
-	wp_mail($toEmail, $subject, $body, $from);
-    echo $toEmail;
+    
+    
+    wp_reset_postdata();
+    wp_mail($toEmail, $subject, $body, $from);
 }
 
 if(array_key_exists('esqueciasenha',$_POST)){
