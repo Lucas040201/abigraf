@@ -348,20 +348,15 @@ function salvar_formulario($post_id){
 
     // Checar se o cnpj existe
     if ($cnpj_query->have_posts()) {
-        while($cnpj_query->have_posts()){
-            $id = wp_insert_post($post);
+        $id = wp_insert_post($post);
 
-            update_field('field_61ed5deafa307', $empresa, $id);
-            update_field('field_61ed5df4fa308', $cnpj_cpf, $id);
-            update_field('field_61ed5e70fa312', $nome, $id);
-            update_field('field_61ed5e75fa313', $email, $id);
-            update_field('field_61edd872d8025', $senha, $id);
-        
-            do_action("acf/save_post", $post_id);
-        
-        }
-    }else {
-        echo '<script>window.location.href = "google.com";</script>';
+        update_field('field_61ed5deafa307', $empresa, $id);
+        update_field('field_61ed5df4fa308', $cnpj_cpf, $id);
+        update_field('field_61ed5e70fa312', $nome, $id);
+        update_field('field_61ed5e75fa313', $email, $id);
+        update_field('field_61edd872d8025', $senha, $id);
+    
+        do_action("acf/save_post", $post_id);
     }
 }
 
@@ -374,7 +369,7 @@ function login_formulario() {
     // Encontrar um post com os valores do acf
 
     $user_query = new WP_Query(array( 
-        'posts_per_page' => 1, 
+        'posts_per_page' => 1,
         'post_type' => 'associados',
         'meta_query'	=> array(
             'relation'		=> 'OR',
@@ -394,7 +389,7 @@ function login_formulario() {
             $password = get_post_meta($user->ID, 'senha', true);
 
             if ($login_password == $password) {
-                echo 
+                echo
                 '<script>
                     window.location.href = "'. home_url() .'/dados-economicos/";
                     sessionStorage.setItem("logado", "logado");
@@ -433,7 +428,7 @@ function yourdomain_save_post() {
 	$toEmail = $_POST['esqueciemail'];
 	$subject = 'Recuperação de senha';		
 	$body    = 'Sua senha é: '. $password .'';
-	$from    = 'contato@abigraf.com.br';
+	$from    = 'noreply@abigraf.org.br';
 	
     
     
@@ -444,3 +439,5 @@ function yourdomain_save_post() {
 if(array_key_exists('esqueciasenha',$_POST)){
     yourdomain_save_post();
 }
+
+include 'inc/json.php';

@@ -99,13 +99,19 @@ $(document).ready(function(){
               const mask = (cpfcnpj.length > 14) ? masks[1] : masks[0];
               $('.cnpj').mask(mask, options);
             }
-        });
+        })
 
         // checar se esta logado
         if ('logado' in sessionStorage) {
-            
+            if(window.location.pathname == '/login/') {
+                $(window).on('load', function() {
+                    $('body').css('opacity', '0')
+                })
+                window.location.href = window.location.origin
+            }
         } else {
-            if(window.location.pathname == '/dados-economicos/' || window.location.pathname == '/apresentacoes/' || window.location.pathname == '/boletins/') {
+            if(window.location.pathname == '/abigraf/dados-economicos/' || window.location.pathname == '/abigraf/apresentacoes/' || window.location.pathname == '/abigraf/boletins/') {
+            // if(window.location.pathname == '/dados-economicos/' || window.location.pathname == '/apresentacoes/' || window.location.pathname == '/boletins/') {
                 $(window).on('load', function() {
                     $('body').css('opacity', '0')
                 })
@@ -113,10 +119,8 @@ $(document).ready(function(){
             }
         }
     }
-    login ();
+    login();
 })
-
-
 
 document.querySelectorAll('.tv__card').forEach(e => {
     
@@ -125,3 +129,20 @@ document.querySelectorAll('.tv__card').forEach(e => {
     e.querySelector('.sb_youtube').style.backgroundImage = "url('"+currentImage+"')";
   
 });
+
+
+function submitForm(e) {
+    e.preventDefault();
+    const cnpj = document.querySelector('.cnpj').value;
+    $.ajax({
+        type: 'GET',
+        url: window.location.origin + '/abigraf/wp-json/custom/v2/consulta?cnpj=' + cnpj,
+        success: function(data) {
+            if(data.error == 0) {
+                e.target.submit();
+            }else {
+                alert('CNPJ/CPF não encontrado');
+            }
+        }
+    });
+}

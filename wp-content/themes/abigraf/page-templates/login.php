@@ -41,7 +41,7 @@ get_header();
         <div class="quero-cadastrar">
             <h3 class="titulo">Quero me cadastrar</h3>
 
-            <form action="" method="post" name="novo_login" id="novo_login">
+            <form action="" method="post" name="novo_login" id="novo_login" onsubmit="submitForm(event)">
                 <h4>Dados do Associado</h4>
                 <input class="input input-full cnpj" minlength="18" maxlength="18" type="text" name="cnpj" id="" placeholder="CNPJ ou CPF *" required>
                 <input class="input input-full" type="text" name="nomeempresa" id="" placeholder="Nome da empresa  *" required>
