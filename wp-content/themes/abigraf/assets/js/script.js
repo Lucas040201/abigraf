@@ -110,8 +110,8 @@ $(document).ready(function(){
                 window.location.href = window.location.origin
             }
         } else {
-            if(window.location.pathname == '/abigraf/dados-economicos/' || window.location.pathname == '/abigraf/apresentacoes/' || window.location.pathname == '/abigraf/boletins/') {
-            // if(window.location.pathname == '/dados-economicos/' || window.location.pathname == '/apresentacoes/' || window.location.pathname == '/boletins/') {
+            // if(window.location.pathname == '/abigraf/dados-economicos/' || window.location.pathname == '/abigraf/apresentacoes/' || window.location.pathname == '/abigraf/boletins/') {
+            if(window.location.pathname == '/dados-economicos/' || window.location.pathname == '/apresentacoes/' || window.location.pathname == '/boletins/') {
                 $(window).on('load', function() {
                     $('body').css('opacity', '0')
                 })
