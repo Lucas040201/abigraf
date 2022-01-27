@@ -136,7 +136,7 @@ function submitForm(e) {
     const cnpj = document.querySelector('.cnpj').value;
     $.ajax({
         type: 'GET',
-        url: window.location.origin + '/abigraf/wp-json/custom/v2/consulta?cnpj=' + cnpj,
+        url: window.location.origin + '/wp-json/custom/v2/consulta?cnpj=' + cnpj,
         success: function(data) {
             if(data.error == 0) {
                 e.target.submit();
