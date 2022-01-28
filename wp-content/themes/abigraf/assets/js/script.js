@@ -115,7 +115,7 @@ $(document).ready(function(){
                 $(window).on('load', function() {
                     $('body').css('opacity', '0')
                 })
-                window.location.href = window.location.origin
+                window.location.href = '/login/'
             }
         }
     }
