@@ -71,7 +71,7 @@ $menus[] = $myMenu;
 			<a href="<?php echo get_field('twitter', 'option'); ?>" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/twitter.svg" alt=""></a>
 			<a href="<?php echo get_field('youtube', 'option'); ?>" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/youtube.svg" alt=""></a>
 			<a href="<?php echo get_field('facebook', 'option'); ?>" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/facebook.svg" alt=""></a>
-			<a href="login" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/user.svg" alt=""></a>
+			<a href="/login" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/user.svg" alt=""></a>
 		</div>
 	</section>
 	<section class="header__mid">
